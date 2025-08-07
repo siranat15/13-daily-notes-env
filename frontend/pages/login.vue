@@ -21,9 +21,10 @@
         class="mb-4 p-2 border w-full rounded"
       />
 
+      <!-- เปลี่ยนปุ่มเป็นสีเขียว -->
       <button
         @click="handleLogin"
-        class="bg-blue-500 text-white p-2 w-full rounded hover:bg-blue-600"
+        class="bg-green-500 text-white p-2 w-full rounded hover:bg-green-600"
       >
         Login
       </button>

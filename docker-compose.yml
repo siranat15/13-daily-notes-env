@@ -2,11 +2,11 @@ services:
   backend:
     build:
       context: ./backend
-    container_name: flask-backend
+    container_name: 013-backend
     env_file:
       - ./backend/.env
     ports:
-      - "5001:5000"
+      - "5013:5000"
     restart: unless-stopped
     networks:
       - app-network
@@ -16,11 +16,11 @@ services:
       context: ./frontend
       args:
         VITE_API_URL: ${VITE_API_URL}   # << ดึงจาก .env ภายนอก
-    container_name: nuxt-frontend
+    container_name: 013-nuxt-frontend
     env_file:
       - ./frontend/.env                # ใช้ตอน runtime
     ports:
-      - "3001:3000"
+      - "3013:3000"
     restart: unless-stopped
     networks:
       - app-network
